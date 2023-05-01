@@ -5,8 +5,9 @@ import Head from "next/head";
 import { api } from "~/utils/api";
 
 const Home: NextPage = () => {
-  const hello = api.example.hello.useQuery({ text: "from tRPC" });
   const user = useUser();
+  const hello = api.example.hello.useQuery({ text: "from tRPC" });
+  //const { data } = api.posts.getAll.useQueery()
 
   return (
     <>
